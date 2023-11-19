@@ -1,0 +1,137 @@
+{
+  "version": "35.0.0",
+  "artifacts": {
+    "MyStaticSiteShop.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MyStaticSiteShop.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MyStaticSiteShop": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://761576343621/us-east-1",
+      "properties": {
+        "templateFile": "MyStaticSiteShop.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::761576343621:role/cdk-hnb659fds-deploy-role-761576343621-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::761576343621:role/cdk-hnb659fds-cfn-exec-role-761576343621-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-761576343621-us-east-1/db23c8aeb71d764f1ff2cd24eedf0b07209f98c10852a8018a2b952a4f47c24e.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MyStaticSiteShop.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::761576343621:role/cdk-hnb659fds-lookup-role-761576343621-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "MyStaticSiteShop.assets"
+      ],
+      "metadata": {
+        "/MyStaticSiteShop/StaticSite/SiteBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteBucket1A888BC8"
+          }
+        ],
+        "/MyStaticSiteShop/StaticSite/SiteBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteBucketPolicyD7934718"
+          }
+        ],
+        "/MyStaticSiteShop/StaticSite/SiteBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteBucketAutoDeleteObjectsCustomResource2FD3C549"
+          }
+        ],
+        "/MyStaticSiteShop/StaticSite/SiteDistribution/Origin1/S3Origin/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteDistributionOrigin1S3OriginF0A508E6"
+          }
+        ],
+        "/MyStaticSiteShop/StaticSite/SiteDistribution/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteDistributionE3AF6299"
+          }
+        ],
+        "/MyStaticSiteShop/StaticSite/DeploySiteContents/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteDeploySiteContentsAwsCliLayerC956F055"
+          }
+        ],
+        "/MyStaticSiteShop/StaticSite/DeploySiteContents/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteDeploySiteContentsCustomResource5A6E01A2"
+          }
+        ],
+        "/MyStaticSiteShop/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/MyStaticSiteShop/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/MyStaticSiteShop/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/MyStaticSiteShop/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/MyStaticSiteShop/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/MyStaticSiteShop/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/MyStaticSiteShop/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/MyStaticSiteShop/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "MyStaticSiteShop"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
