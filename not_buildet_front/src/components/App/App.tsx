@@ -16,7 +16,7 @@ function App() {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('https://4mq3naeez9.execute-api.us-east-1.amazonaws.com/prod/products');
+      const response = await fetch('https://zwzhz3jrej.execute-api.us-east-1.amazonaws.com/prod/products');
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
