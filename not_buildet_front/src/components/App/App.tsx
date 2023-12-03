@@ -16,7 +16,7 @@ function App() {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('https://zwzhz3jrej.execute-api.us-east-1.amazonaws.com/prod/products');
+      const response = await fetch('https://h439o1jara.execute-api.us-east-1.amazonaws.com/dev/products');
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
@@ -38,7 +38,7 @@ function App() {
           <Route index element={<PageOrders />} />
           <Route path=":id" element={<PageOrder />} />
         </Route>
-        <Route path="admin/products" element={<PageProductImport />} />
+        <Route path="admin/products" element={<PageProductImport />} />    {/* !!!!!!!! admin/products!!!!!! */}
 
         <Route path="admin/product-form">
           <Route index element={<PageProductForm />} />

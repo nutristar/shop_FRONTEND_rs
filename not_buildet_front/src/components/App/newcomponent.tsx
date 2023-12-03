@@ -10,7 +10,7 @@ const YourComponent: React.FC = () => {
 
   // Function to perform a GET request with the selected number
   function fetchProduct2(selectedNumber: string) {
-    const url = `https://zwzhz3jrej.execute-api.us-east-1.amazonaws.com/prod/products/${selectedNumber}`;
+    const url = `https://h439o1jara.execute-api.us-east-1.amazonaws.com/dev/products/${selectedNumber}`;
 
     // Perform the GET request to the API
     fetch(url)
