@@ -51,11 +51,11 @@ function App() {
       </Routes>
       <div>
         <div>
-          <Link to="#" onClick={fetchProducts}>Load Products</Link>
-          <pre>{products}</pre> {/* Использование элемента <pre> для отображения данных */}
+          {/* <Link to="#" onClick={fetchProducts}>Load Products</Link>
+          <pre>{products}</pre> Использование элемента <pre> для отображения данных */}
         </div>
         <div>
-          <YourComponent />
+          {/* <YourComponent /> */}
         </div>
       </div>
     </MainLayout>
