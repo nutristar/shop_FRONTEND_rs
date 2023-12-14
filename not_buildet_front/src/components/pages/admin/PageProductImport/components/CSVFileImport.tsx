@@ -28,11 +28,16 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
     }
   
     console.log("uploadFile to", url);
-  
+    localStorage.setItem("myAuthToken", "bnV0cmlzdGFyOlRFU1RfUEFTU1dPUkQ=");
+
+    const token = localStorage.getItem("myAuthToken");
     try {
       // Получение данных для подписанного POST запроса
       const response = await axios.get(url, {
         params: { name: encodeURIComponent(file.name) },
+        headers: {
+          'Authorization': `Basic ${token}`
+        }
       });
   
       // Данные, возвращенные лямбда-функцией
