@@ -27,7 +27,7 @@ export default function PageProductImport() {
           Create product
         </Button>
       </Box>
-      {/* <ProductsTable /> */}
+      <ProductsTable />
     </Box>
   );
 }
