@@ -9,13 +9,19 @@ export function useAvailableProducts() {
     "available-products",
     async () => {
       const res = await axios.get<AvailableProduct[]>(
-        // `${API_PATHS.product}/product/available`
-          `${API_PATHS.product}/`
+          `${API_PATHS.product}/`, {
+                  headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                  }
+                }
       );
       return res.data;
     }
   );
 }
+
+
+// Bearer authorizationToken
 
 // export async function useAvailableProducts() {
 //   try {
