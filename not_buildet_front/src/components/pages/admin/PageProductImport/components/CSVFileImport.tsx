@@ -27,10 +27,15 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
       return;
     }
   
+  
     console.log("uploadFile to", url);
     localStorage.setItem("myAuthToken", "bnV0cmlzdGFyOlRFU1RfUEFTU1dPUkQ=");
 
     const token = localStorage.getItem("myAuthToken");
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 0e1e2b721ba8fc1c042bb39de8747ee0a4384093
     try {
       // Получение данных для подписанного POST запроса
       const response = await axios.get(url, {
